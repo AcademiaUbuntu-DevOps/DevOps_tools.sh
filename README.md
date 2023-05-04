@@ -15,5 +15,5 @@ Right now I'm working on a 'per distro' installation. I tend to switch my Linux 
 
 In order to set up my configuration files, in case of Arch Linux simply use the following command:
 ```
-chmod +x ./setup.sh && ./setup.sh
+chmod +x ./super_setup.sh && ./super_setup.sh
 ```
