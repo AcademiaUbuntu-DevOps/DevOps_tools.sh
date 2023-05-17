@@ -99,7 +99,7 @@ f_DOCKER(){
     echo -e "$cyn \n#################### Installing Docker $end"
     sleep 2
 
-    which docker   || echo -e "$yel Was already installed $end" && return
+    # which docker   || echo -e "$yel Was already installed $end" && return
 
     # Removing old version of Docker
     sudo apt install gnome-terminal -y
@@ -169,7 +169,7 @@ f_KUBECTL(){
 f_KUBENS_KUBECTX(){
     echo -e "$cyn \n######################### kubens and kubectx $end"
     sleep 2
-    which kubens ; which kubectx   || echo -e "$yel Was already installed $end" && return
+    # which kubens ; which kubectx   || echo -e "$yel Was already installed $end" && return
 
     curl https://raw.githubusercontent.com/ahmetb/kubectx/master/kubectx -o kubectx
     curl https://raw.githubusercontent.com/ahmetb/kubectx/master/kubens -o kubens
@@ -183,7 +183,7 @@ f_KUBENS_KUBECTX(){
 f_TERRAFORM(){
     echo -e "$cyn \n######################### Terraform $end"
     sleep 2
-    which terraform   || echo -e "$yel Was already installed $end" && return
+    # which terraform   || echo -e "$yel Was already installed $end" && return
 
     wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
     echo -e "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
