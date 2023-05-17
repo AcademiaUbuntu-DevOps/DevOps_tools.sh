@@ -9,6 +9,7 @@
 #   kubectx
 #   HELM
 #   terraform
+#   Lens
 
 # Códigos de Colores
 red=$'\e[1;31m'
@@ -129,6 +130,12 @@ f_DOCKER(){
     docker version
 }
 
+f_MICROK8S(){
+    echo -e "$cyn \n######################### Installing Microk8s $end"
+    sleep 2
+    snap install microk8s --classic
+}
+
 f_KIND(){
     # https://kind.sigs.k8s.io/docs/user/quick-start/#installation 
 
@@ -196,6 +203,13 @@ f_HELM(){
 }
 
 
+f_LENS(){
+    echo -e "$cyn \n######################### Lens $end"
+    sleep 2
+    sudo snap install kontena-lens --classic
+}
+
+
 f_END () {
     echo -e "$cyn \n######################### Installed software $end"
 
@@ -225,8 +239,11 @@ f_OS_SELECTOR
 f_UPGRADE
 f_GENERAL
 f_DOCKER
+f_MICROK8S
+f_KIND
 f_KUBECTL
 f_KUBENS_KUBECTX
 f_TERRAFORM
 f_HELM
+f_LENS
 f_END
