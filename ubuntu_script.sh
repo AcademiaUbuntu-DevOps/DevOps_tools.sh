@@ -209,6 +209,13 @@ f_LENS(){
     sudo snap install kontena-lens --classic
 }
 
+f_AWS_CLI(){
+    https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install
+}
 
 f_END () {
     echo -e "$cyn \n######################### Installed software $end"
@@ -231,6 +238,7 @@ f_END () {
     echo -e "$cyn \n### kubectx $end"
     which kubectx   || echo -e "$red Error, not installed"
 }
+
 ######################### START HERE
 
 are_you_root
@@ -246,4 +254,5 @@ f_KUBENS_KUBECTX
 f_TERRAFORM
 f_HELM
 f_LENS
+f_AWS_CLI
 f_END
